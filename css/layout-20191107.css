@@ -12736,13 +12736,69 @@ border-bottom-color: #f5f5f5;
 
 /*timelinebox_start*/
 
-.timelinebox{
+.allbox{
     width: 100%;
     height: 500px;
-    background-color: #ff0000;
+    background-color: #d7d7d7;
     float: left;
 }
 
+.timelinebox{
+    width: 90%;
+    margin: auto;
+}
+
+.txtbox{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.leftbox{
+    width: 280px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.leftbox::after{
+    display:block;
+    position: absolute;
+    content: "";
+    border-width:8px;
+    border-style:solid;
+    border-color:transparent transparent transparent white;
+    right: -16px;
+    top: 30px;
+}
+
+.leftbox img{
+    display: block;
+    max-width: 100%;
+}
+
+.leftbox h1{
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.leftbox p{
+    font-size: 13px;
+    color: #4f4f4f;
+
+}
+
+.datebox{
+    width: 260px;
+    display: inline-block;
+    vertical-align:top;
+    font-size: 28px;
+    font-family: Georgia, Times, serif;
+    padding: 20px;
+    color: #797979;
+}
 
 /*timelinebox_end*/
 
