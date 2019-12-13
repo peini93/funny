@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://www.twitchalerts.com/audio-frame -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+
+</head>
+<body>
+
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="please.min.js"></script>
+    <script src="soundmanager2-nodebug-jsmin.js"></script>
+
+    <script>
+
+    var flashSupport = (navigator.mimeTypes && navigator.mimeTypes.length ? Array.prototype.slice.call(navigator.mimeTypes).some(function(a) { return "application/x-shockwave-flash" == a.type; }) : /MSIE/.test(navigator.userAgent) ? eval("try { new ActiveXObject('ShockwaveFlash.ShockwaveFlash') && !0 } catch(e) { !1 };") : !1);
+    var html5AudioSupport = (function() { var a = document.createElement('audio'); return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, '')); })();
+
+    please.init(window);
+
+    var settings = {
+        url: '/vendor/scottschiller/SoundManager2/swf/',
+        onready: function() {
+
+            window.playSounds = function(soundsToPlay)
+            {
+                soundManager.stopAll();
+                (function playEach(sounds) {
+
+                    var currentSound = sounds.shift();
+                    if (currentSound) {
+                        var sound = soundManager.createSound({
+                            volume: currentSound.volume,
+                            url: currentSound.url,
+                            onfinish: function() {
+                                if (sounds.length) {
+                                    playEach(sounds);
+                                }
+                            }
+                        });
+
+                        if (sound) {
+                            sound.play();
+                        }
+                    }
+
+                })(soundsToPlay);
+            }
+
+        }
+    };
+
+    if (!html5AudioSupport) {
+        settings.flashVersion = 9;
+        settings.preferFlash = true;
+    }
+
+    soundManager.setup(settings);
+
+    </script>
+
+
+</body></html>
