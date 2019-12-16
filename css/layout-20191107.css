@@ -12905,16 +12905,19 @@ border-bottom-color: #f5f5f5;
 
 .leftbox{
     width: 270px;
+    height: 300px;
     position: relative;
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
     display: inline-block;
     box-shadow: 2px 1px 5px 3px #dfdfdf;
+    overflow: hidden;
 }
 
 .rightbox{
     width: 270px;
+    height: 300px;
     position: relative;
     background-color: #fff;
     border-radius: 10px;
@@ -12923,6 +12926,7 @@ border-bottom-color: #f5f5f5;
     margin-top: -270px;
     display: inline-block;
     box-shadow: 2px 1px 5px 3px #dfdfdf;
+    overflow: hidden;
 }
 
 .leftbox::after{
