@@ -12742,6 +12742,10 @@ border-bottom-color: #f5f5f5;
     float: left;
 }
 
+.topbar{
+    position: relative;
+}
+
 .all_editor a{
     display: block;
     width: fit-content;
@@ -12762,10 +12766,44 @@ border-bottom-color: #f5f5f5;
     color: #fff;
 }
 
+.search_ed{
+    height: 34px;
+    width: 250px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+    left: 175px;
+    background: url(../img/exclamation-mark.svg) 10px 7px #fff no-repeat;
+    background-size: 20px 20px;
+}
+.search_ed a{
+    font-size: 12px;
+    line-height: 34px;
+    width: 30px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #a8afb7;
+    color: #fff;
+    text-decoration: none;
+}
+
+.search_ed a:hover{
+    background-color: #5a6067;
+}
+
+.search_ed input{
+    outline: none;
+    border: 0;
+    width: 165px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 40px;
+}
+
 .outbox{
     width: 620px;
     position: relative;
-    margin: 0 auto 30px auto;
+    margin: 8px auto 30px auto;
 }
 
 .editor_box{
