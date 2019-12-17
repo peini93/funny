@@ -12781,14 +12781,14 @@ border-bottom-color: #f5f5f5;
     overflow: visible;
 }
 
-.ed_closebtn{
+.ed_closebtn,.ed_rotate{
     right: -20px;
     top: 10px;
     z-index: 9999;
     position: absolute;
 }
 
-.ed_closebtn a{
+.ed_closebtn a,.ed_rotate a{
     display: block;
     width: 30px;
     height: 30px;
@@ -12796,7 +12796,7 @@ border-bottom-color: #f5f5f5;
     border-radius: 30px;
     background-color: #fff;
 }
-.ed_closebtn a::after{
+.ed_closebtn a::after,.ed_rotate a::after{
     content: "";
     position: absolute;
     border-top: 3px #5a6067 solid;
@@ -12812,14 +12812,25 @@ border-bottom-color: #f5f5f5;
     width: 16px;
     top: 14px;
     left: 7px;
-    transform: rotate(90deg);
+    transform: rotate(90deg); 
 }
 
-.ed_closebtn a:hover{
+.ed_rotate a::before{
+    content: "";
+    position: absolute;
+    border-top: 3px #5a6067 solid;
+    width: 16px;
+    top: 14px;
+    left: 7px;
+    transform: rotate(0deg);
+}
+
+.ed_closebtn a:hover,.ed_rotate a:hover{
     background-color: #5a6067;
 }
 
-.ed_closebtn a:hover::after,.ed_closebtn a:hover::before{
+.ed_closebtn a:hover::after,.ed_closebtn a:hover::before,
+.ed_rotate a:hover::after,.ed_rotate a:hover::before{
     border-top: 3px #fff solid;
 }
 
