@@ -12956,6 +12956,14 @@ border-bottom-color: #f5f5f5;
     margin: 20px auto;
 }
 
+.txtbox a{
+    text-decoration: none;
+}
+
+.txtbox a:hover{
+    color: #7777a9;
+}
+
 .leftbox{
     width: 270px;
     height: 300px;
