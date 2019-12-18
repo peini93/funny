@@ -18331,3 +18331,33 @@ border-top-color: #f5f5f5;
 border-bottom-color: #f5f5f5;
 */
 }
+
+
+/* timelinebox_start */
+@media only screen and (max-width:60em) {
+    .all_editor a {
+        margin: 5% 0 0 3%;
+    }
+
+    .search_ed {
+        height: 34px;
+        width: 55%;
+        border-radius: 34px;
+        position: absolute;
+        top: 0;
+        left: 38%;
+        background: url(../img/exclamation-mark.svg) 10px 7px #fff no-repeat;
+        background-size: 20px 20px;
+    }
+
+    .search_ed input{
+        outline: none;
+        border: 0;
+        width: 3em;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 40px;
+        box-shadow: none;
+    }
+   
+}
